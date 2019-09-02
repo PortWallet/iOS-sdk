@@ -114,7 +114,7 @@ portWallet.manageAccount(viewController: UIViewController, token: String)
 ## Delegate Methods
 There are three delegate methods in `Portwallet`.
 ```
-- getSecret
+- getSecret [required]
 - success
 - failure
 ```
@@ -173,8 +173,10 @@ Response Method Type:
 ```
 
 ### Error Code
-- `4005xxx`: Any type of network error
+
+- `4005xxx`: internet unavailable
 - `4002xxx`: Invoice validation error
-- `400100x`: Token or Secret key empty
+- `400100x`: Token/Secret key/App key empty
 - `400101x`: Logout Error
-- `4004xxx`: Invoice create error
+- `4004xxx`: error in invoice generated
+- `4006xxx`: error in invoice payment process
